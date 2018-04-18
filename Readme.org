@@ -1,0 +1,12 @@
+* MyBatis and Kotlin
+
+A simple demonstration of using MyBatis and Kotlin in relation to ~java.sql.Timestamp~ and ~java.time.LocalDateTime~. 
+
+TL;DR: You need a constructor to convert between the ~Timestamp~ and ~LocalDateTime~:
+
+#+BEGIN_SRC kotlin
+   constructor( gameId: Int,
+                 name:String,
+                 bggId :Int ,
+                 sqlTimestamp: Timestamp): this(gameId,name,bggId,sqlTimestamp.toLocalDateTime())
+#+END_SRC

@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: 'jdbc:h2:mem:mydb'
+
+mybatis:
+    configuration:
+      map-underscore-to-camel-case: true

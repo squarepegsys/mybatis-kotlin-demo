@@ -8,7 +8,8 @@ buildscript {
 	}
 	dependencies {
 	classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-                classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'org.liquibase:liquibase-gradle-plugin:1.2.4'
     }
 }
 
@@ -18,6 +19,7 @@ apply plugin: 'eclipse'
 apply plugin: 'kotlin'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'liquibase'
 
 group = 'com.objectpartners'
 version = '0.0.1-SNAPSHOT'
